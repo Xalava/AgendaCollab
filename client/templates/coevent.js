@@ -9,8 +9,11 @@ Template.coevent.events({
   
    "click .delete": function () {
    Meteor.call("deleteCoev", this._id)
-}
+},
 
+   "click .vote": function () {
+   Meteor.call("voteCoev", this._id)
+},
   
 //   "click .toggle-private": function () {
 //   Meteor.call("setPrivate", this._id, ! this.private);

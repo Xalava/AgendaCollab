@@ -5,11 +5,16 @@ Template.body.helpers({
   
   coevents: function () {
     switch (Session.get("sort")) {
-      case 1:
-        return Coevents.find({}, {sort: {createdAt: 1}});
+      case 1://trending
+        return Coevents.find({}, {sort: {votes: -1}});
         break;
-      case 2:
-        return Coevents.find({}, {sort: {date: -1}});
+      case 2://upcoming
+        return Coevents.find({}, {sort: {date: 1}});
+        // superiuer date aujourd'hui
+        //pas vide
+        break;
+      case 3://new
+        return Coevents.find({}, {sort: {createdAt: -1}});
         break;
       default:
         return Coevents.find({}, {sort: {createdAt: -1}});
@@ -58,6 +63,9 @@ Template.body.events({
   
   'click .upcoming': function (event) {
     Session.set("sort", 2);
+  },
+    'click .new': function (event) {
+    Session.set("sort", 3);
   }
  
 });

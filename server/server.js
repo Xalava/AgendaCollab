@@ -14,22 +14,28 @@ Meteor.methods({
         name: name,
         date:date,
         url:url,
+        votes:0,
         createdAt: new Date(),
         owner: "00",
         username: "Anonymous"
+
       });
     } else {
       Coevents.insert({
         name: name,
         date:date,
         url:url,
+        votes:0,
         createdAt: new Date(),
         owner: Meteor.userId(),
         username: Meteor.user().username
       });
     }
   },
+  voteCoev: function (coevId) {
+    Coevents.update(coevId,{$inc: {votes: 1}});
 
+  },
   deleteCoev: function (coevId) {
     // var coevent = coevents.findOne(coevId);
     // if (coevent.private && coevent.owner !== Meteor.userId()) {
