@@ -1,0 +1,34 @@
+a{
+	font-style: italic;
+}
+li {
+  position: relative;
+  list-style: none;
+  padding: 15px;
+  border-bottom: #eee solid 1px;
+}
+
+li .text {
+  margin-left: 10px;
+}
+
+li.checked {
+  color: #888;
+}
+
+li.checked .text {
+  text-decoration: line-through;
+}
+
+li.private {
+  background: #eee;
+  border-color: #ddd;
+}
+.delete {
+  float: right;
+  font-weight: bold;
+  background: none;
+  font-size: 1em;
+  border: none;
+  position: relative;
+}
