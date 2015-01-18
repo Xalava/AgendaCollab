@@ -43,4 +43,5 @@ li.private {
   background: none;
   border: 5px;
   position: relative;
+  overflow:auto
 }

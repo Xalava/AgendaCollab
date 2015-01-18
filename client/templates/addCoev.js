@@ -3,7 +3,7 @@ Template.addCoev.events({
     // This function is called when the new event form is submitted
 
     var name = event.target.nameCoev.value;
-    if (date =="")
+    //if (date =="")
     var date = new Date(event.target.dateCoev.value);
    	var url = event.target.urlCoev.value;
     // debugVar = event.target.urlCoev.value;
