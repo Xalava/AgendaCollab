@@ -3,7 +3,8 @@ Template.addCoev.events({
     // This function is called when the new event form is submitted
 
     var name = event.target.nameCoev.value;
-    var date = event.target.dateCoev.value;
+    if (date =="")
+    var date = new Date(event.target.dateCoev.value);
    	var url = event.target.urlCoev.value;
     // debugVar = event.target.urlCoev.value;
     // call addCoev method
@@ -21,7 +22,17 @@ Template.addCoev.events({
 
 });
 Template.addCoev.rendered = function() {
-    $('#dateEv').datetimepicker();
+    // $('#dateEv').datepicker({ 
+    	// dateFormat: 'dd-mm-yy',
+    	// pickTime: false
+    // });
+
+   $('#dateEv').datepicker('getUTCdate');
+
+    // {
+    // todayHighlight: true
+    // });
+
 }
 
 // Template.addCoev.rendered=function() {

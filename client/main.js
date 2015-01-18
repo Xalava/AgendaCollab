@@ -9,13 +9,16 @@ Template.body.helpers({
         return Coevents.find({}, {sort: {votes: -1}});
         break;
       case 2://upcoming
-        return Coevents.find({}, {sort: {date: 1}});
-        // superiuer date aujourd'hui
+        return Coevents.find({}, {sort: {date: 1}},{date:{$gt: Date()}},{date:{$not:0}});
+        // suprimer date aujourd'hui
         //pas vide
         break;
       case 3://new
         return Coevents.find({}, {sort: {createdAt: -1}});
         break;
+      case 4://bestOfToday
+        return Coevents.find({}, {date: {$gt:Date()}},{sort: {votes: -1}});
+        break; 
       default:
         return Coevents.find({}, {sort: {createdAt: -1}});
     }
@@ -66,8 +69,10 @@ Template.body.events({
   },
     'click .new': function (event) {
     Session.set("sort", 3);
+  },
+  'click .bestOfToday': function (event) {
+    Session.set("sort", 4);
   }
- 
 });
 
 

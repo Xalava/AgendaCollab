@@ -8,5 +8,5 @@ meteor-platform
 twbs:bootstrap
 accounts-facebook
 ian:accounts-ui-bootstrap-3
-rajit:bootstrap3-datepicker
 tsega:bootstrap3-datetimepicker
+rajit:bootstrap3-datepicker
