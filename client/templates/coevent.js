@@ -26,3 +26,12 @@ Template.coevent.events({
 //     return this.owner === Meteor.userId();
 //   }
 }); 
+
+Template.coevent.helpers({
+  coeventDate: function() {
+  	var coeventDate = moment(this.date).format('DD/MM/YYYY');
+    return coeventDate;
+
+  }
+
+});

@@ -94,3 +94,9 @@ header .hide-completed {
     padding-bottom: 5px;
   }
 }
+
+
+/*Bar on top of screen*/
+.buttonBar {
+  color:#000;
+}
