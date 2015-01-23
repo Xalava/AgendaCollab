@@ -27,7 +27,7 @@ Template.addCoev.rendered = function() {
     	// pickTime: false
     // });
 
-   $('#dateEv').datepicker('getUTCdate');
+  // $('#dateEv').datepicker('getUTCdate');
 
     // {
     // todayHighlight: true
