@@ -1,7 +1,8 @@
 /* Main Style sheet */
 body {
   font-family: sans-serif;
-  background-color: #315481;
+  /*background-color: #315481;*/
+
   background-attachment: fixed;
   background-image: url('/img/living.jpg');
   position: absolute;
@@ -12,34 +13,34 @@ body {
   padding: 0;
   margin: 0;
   font-size: 14px;
+
 }
 
 .mainContainer {
   max-width: 1024px;
-
- /* margin: 0 auto;
-  min-height: 100%;*/
-  background: #FCFCFC;
-  padding: 0px 0px 0px 0px;
+  padding: 0px;
 }
 
-header {
+.supraBar {
   background: #214471;
   padding: 2%;
   position: relative;
   color:#CCC;
+  margin:0px;
 }
-
+header {
+  padding: 0px;
+  margin:0px;
+}
 .bottombar {
   background: #214471;
   padding: 1% 0px 1% 0px;
-  color:#CCC;
-  position:fixed;
+/*  color:#000;
+*/  position:fixed;
   bottom:0px;
   width:100%  ;
   max-width: 1024px; /*workaround*/
   /*!! bug couvre le dernier event*/
-  /*box-sizing: border-box;*/
 
 
 }
@@ -48,9 +49,9 @@ header {
 
 }
 
-#login-buttons {
+/*#login-buttons {
   display: block;
-}
+}*/
 
 .letitre {
   font-size: 2em;
@@ -75,47 +76,24 @@ form {
   padding-right: 80px;
   font-size: 1em;
   color: #999;
-/*  position:fixed bottom;
-*/}
+  position:fixed bottom;
+}
 
 .add-coev input:focus{
   outline: 0;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-  background: white;
-}
-
-
-
-
-header .hide-completed {
-  float: right;
-}
-
-.toggle-private {
-  margin-left: 5px;
-}
-
-@media (max-width: 600px) {
-  li {
-    padding: 12px 15px;
-  }
-
-  .search {
-    width: 150px;
-    clear: both;
-  }
-
-  .new-task input {
-    padding-bottom: 5px;
-  }
-}
-
-
 /*Bar on top of screen*/
 .buttonBar {
   color:#000;
+}
+
+.coeventsList{
+  padding:0;
+}
+
+.coeventsList ul {
+  margin: 0;
+  padding-left: 0px;
+  /*background: white;*/
 }

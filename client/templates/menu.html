@@ -1,22 +1,23 @@
 <template name="menu">
 
-<div class="navbar ">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <span  class="letitre navbar-brand">Agenda Collab</span>
-    </div>
+<div class="supraBar">
+      <span  class="letitre">Agenda Collab</span>
+    <!-- <div class="nav-collapse collapse"> -->
 
-    <div class="btn-group" role="group" label="group" aria-label="...">
-  	  <button class="trending btn buttonBar">Trending</button>
-  	  <button class="upcoming btn buttonBar">Upcoming</button>
-  		<button class="new btn buttonBar">Newest</button>
-    </div>
-      <button class="bestOfToday btn buttonBar">Today's best</button>
+          <div class="btn-group" role="group" label="group" aria-label="...">
+        	  <button class="trending btn buttonBar">Trending</button>
+        	  <button class="upcoming btn buttonBar">Upcoming</button>
+        		<button class="new btn buttonBar">Newest</button>
+          </div>
 
-    <div class="navbar-right"> 
-      {{> loginButtons}}
-    </div>
-  </div> <!-- container -->
+            <button class="bestOfToday btn buttonBar">Today's best</button>
+
+          <div class="navbar-right"> 
+            {{> loginButtons}}
+          </div>
+    <!-- </div> -->
+
+
 </div> <!-- navbar -->
 
 

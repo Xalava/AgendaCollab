@@ -1,7 +1,11 @@
 <template name="coeventsList">
-  		<ul>
+	<div class="coeventslist">
+  		<ul style=" padding-left: 0px;"> <!-- workaround -->
       		{{#each coevents}}
 	        	{{> coevent}}
       		{{/each}}
     	</ul>
+    </div>
+    {{> footer}}
+
  </template>
