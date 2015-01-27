@@ -16,25 +16,33 @@ body {
 
 .mainContainer {
   max-width: 1024px;
-  margin: 0 auto;
-  min-height: 100%;
+
+ /* margin: 0 auto;
+  min-height: 100%;*/
   background: #FCFCFC;
   padding: 0px 0px 0px 0px;
 }
 
 header {
   background: #214471;
-  padding: 20px 15px 15px 15px;
+  padding: 2%;
   position: relative;
   color:#CCC;
 }
 
 .bottombar {
   background: #214471;
-  padding: 20px 15px 15px 15px;
+  padding: 1% 0px 1% 0px;
   color:#CCC;
-  position:fixed;bottom:0px;width: 100%;
-  text-align:center;
+  position:fixed;
+  bottom:0px;
+  width:100%  ;
+
+
+}
+.addBar {
+
+
 }
 
 #login-buttons {

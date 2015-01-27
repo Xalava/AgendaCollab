@@ -5,8 +5,8 @@ Template.body.helpers({
 
 // // Config pour comptes
 Accounts.ui.config({
-  requestPermissions: {
-    facebook: ['public_profile,user_events'] //email,user_location,user_likes
-      },
-    passwordSignupFields: "USERNAME_ONLY" //USERNAME_AND_OPTIONAL_EMAIL
+  //requestPermissions: {
+  //   facebook: ['public_profile,user_events'] //email,user_location,user_likes
+    //   },
+    passwordSignupFields: "USERNAME_AND_EMAIL" //USERNAME_AND_OPTIONAL_EMAIL
   });
