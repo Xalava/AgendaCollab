@@ -1,33 +1,24 @@
 <template name="addCoev" >
-    <div class="bottombar ">
-        <div class="row">
-            <div class="col-xs-4 col-xs-offset-1">
-                <div class="dropdown dropup ">
-                    <button class="btn btn-success buttonBar dropdown-toggle btn-block " type="button" data-toggle="dropdown" >
-                        <span class="glyphicon glyphicon-plus"></span> Ajouter un évènement
-                    </button>
 
-                    <div class="dropdown-menu dropup" style="background-color: #214471" >
-                        <form class="add-coev">
+    <div class="dropdown dropup ">
+        <button class="btn btn-success buttonBar dropdown-toggle btn-block " type="button" data-toggle="dropdown" >
+            <span class="glyphicon glyphicon-plus"></span> Ajouter un évènement
+        </button>
 
-                            <input type="text" class="form-control" name="nameCoev" placeholder="Event Name" />
-                            <div class="input-group date">
+        <div class="dropdown-menu dropup" style="background-color: #214471" >
+            <form class="add-coev">
 
-                            <input class="set-due-date form-control" type="date" name="dateCoev" placeholder="date" id="dateEv"/>
-                            </div>
-                            <input type="url" class="form-control" name ="urlCoev" placeholder="Website"/>
-                            <input type="submit" class="btn glyphicon glyphicon-plus"/> 
-                        </form>
-                    </div>
+                <input type="text" class="form-control" name="nameCoev" placeholder="Nom de l'évènement" required/>
+                <div class="input-group date">
+
+                <input class="set-due-date form-control" type="date" name="dateCoev" placeholder="date" id="dateEv"/>
                 </div>
-            </div>
-        <!-- bouton fb -->
-       <!--          <button class="importFB btn btn-primary buttonBar"><span class="glyphicon glyphicon-upload"></span>Importer depuis Facebook</button> -->
-            <div class="col-xs-4 col-xs-offset-2">
-                {{> fbimport}}
-            </div>
-        </div> <!-- row -->
-    </div> 
+                <input type="text" class="form-control" name ="urlCoev" placeholder="site" novalidate="novalidate"/>
+                <input type="submit" class="btn glyphicon glyphicon-plus"/> 
+            </form>
+        </div>
+    </div>
+
 </template>
 
 

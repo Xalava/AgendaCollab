@@ -29,8 +29,12 @@ Template.coevent.events({
 
 Template.coevent.helpers({
   coeventDate: function() {
-  	var coeventDate = moment(this.date).format('DD/MM/YYYY');
-    return coeventDate;
+  	// if (this.date != 0) {
+  		var coeventDate = moment(this.date).format('DD/MM/YYYY');
+    	return coeventDate;
+	// } else{
+	//  return "";
+	// }
 
   }
 

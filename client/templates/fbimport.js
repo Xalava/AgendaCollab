@@ -15,10 +15,6 @@ Template.fbimport.events({
        
     });
 
-
-
-
-
   }
   
   

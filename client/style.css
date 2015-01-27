@@ -37,6 +37,9 @@ header {
   position:fixed;
   bottom:0px;
   width:100%  ;
+  max-width: 1024px; /*workaround*/
+  /*!! bug couvre le dernier event*/
+  /*box-sizing: border-box;*/
 
 
 }
