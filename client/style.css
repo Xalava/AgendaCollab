@@ -1,4 +1,4 @@
-/* CSS declarations go here */
+/* Main Style sheet */
 body {
   font-family: sans-serif;
   background-color: #315481;
@@ -18,7 +18,7 @@ body {
   max-width: 1024px;
   margin: 0 auto;
   min-height: 100%;
-  background: white;
+  background: #FCFCFC;
   padding: 0px 0px 0px 0px;
 }
 
@@ -29,11 +29,18 @@ header {
   color:#CCC;
 }
 
+.bottombar {
+  background: #214471;
+  padding: 20px 15px 15px 15px;
+  position: relative;
+  color:#CCC;
+}
+
 #login-buttons {
   display: block;
 }
 
-h1 {
+.letitre {
   font-size: 2em;
   margin: 0;
   margin-bottom: 10px;

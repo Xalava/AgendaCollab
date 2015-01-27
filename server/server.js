@@ -1,9 +1,7 @@
-//necessaire?
-// if (Meteor.isServer) {
-//   Meteor.startup(function () {
-//       // code to run on server at startup
-//   }
-// } //End is server
+Meteor.startup(function () {
+     // code to run on server at startup
+});
+
 
 Meteor.methods({
   addCoev: function (name,date,url) {

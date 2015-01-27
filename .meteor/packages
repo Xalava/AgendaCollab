@@ -6,8 +6,9 @@
 
 meteor-platform
 twbs:bootstrap
-accounts-facebook
-ian:accounts-ui-bootstrap-3
 tsega:bootstrap3-datetimepicker
 rajit:bootstrap3-datepicker
 mrt:moment
+iron:router
+ian:accounts-ui-bootstrap-3
+accounts-password
