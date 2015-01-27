@@ -32,8 +32,9 @@ header {
 .bottombar {
   background: #214471;
   padding: 20px 15px 15px 15px;
-  position: relative;
   color:#CCC;
+  position:fixed;bottom:0px;width: 100%;
+  text-align:center;
 }
 
 #login-buttons {

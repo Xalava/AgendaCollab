@@ -1,0 +1,4 @@
+Template.footer.events({
+
+  
+});
