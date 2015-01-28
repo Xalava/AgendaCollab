@@ -19,6 +19,7 @@ Template.addCoev.events({
     event.target.dateCoev.value = "";
     event.target.urlCoev.value = "";
 
+    document.location.reload();
 
     // Prevent default form submit
     return false;

@@ -34,7 +34,7 @@ header {
 }
 .bottombar {
   background: #214471;
-  padding: 1% 0px 1% 0px;
+  padding: 1%;
 /*  color:#000;
 */  position:fixed;
   bottom:0px;
@@ -96,4 +96,15 @@ form {
   margin: 0;
   padding-left: 0px;
   /*background: white;*/
+}
+
+
+.fbimportScreen {
+/*  background-color: #FFF;
+*/  background: #FFF;
+  /*color:black;*/
+  margin:0;
+  padding: 1%;
+
+
 }

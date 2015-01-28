@@ -1,0 +1,37 @@
+.imported-list ul{
+
+   padding-left: 0px;
+}
+.imported-list{
+
+   padding-left: 0px;
+}
+.imported-list a{
+	font-style: italic;
+}
+.imported-list li {
+  position: relative;
+  list-style: none;
+  padding: 15px;
+  border-bottom: #EEE solid 1px;
+  background-color: #FFF;
+  margin:0;
+}
+
+.imported-list li .text {
+  margin-left: 10px;
+}
+
+.imported-list .toggle-import {
+
+  float: left;
+  font-weight: bold;
+  background: none;
+  border: 5px;
+  position: relative;
+  overflow:auto
+}
+.imported-list .to-add {
+  color:#006400;
+
+}
