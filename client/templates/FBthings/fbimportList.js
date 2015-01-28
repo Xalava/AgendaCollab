@@ -1,4 +1,4 @@
-importedEvents = new Mongo.Collection();
+importedEvents = new Mongo.Collection(null);
 
 Template.fbimportList.events({
 
