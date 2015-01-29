@@ -8,6 +8,6 @@ meteor-platform
 twbs:bootstrap
 mrt:moment
 iron:router
-ian:accounts-ui-bootstrap-3
 accounts-password
 biasport:facebook-sdk
+mrt:accounts-ui-bootstrap-3

@@ -1,68 +1,126 @@
+/********************/
 /* Main Style sheet */
+/********************/
+
 body {
   font-family: sans-serif;
-  /*background-color: #315481;*/
-
   background-attachment: fixed;
   background-image: url('/img/living.jpg');
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 0;
-  margin: 0;
-  font-size: 14px;
-
 }
-
-.mainContainer {
-  max-width: 1024px;
-  padding: 0px;
-}
-
-.supraBar {
-  background: #214471;
-  padding: 2%;
-  position: relative;
-  color:#CCC;
-  margin:0px;
-}
-header {
-  padding: 0px;
-  margin:0px;
-}
-.bottombar {
-  background: #214471;
-  padding: 1%;
-/*  color:#000;
-*/  position:fixed;
-  bottom:0px;
-  width:100%  ;
-  max-width: 1024px; /*workaround*/
-  /*!! bug couvre le dernier event*/
+/*#mainCont{
+    max-width: 1024px;
+      padding: 0;
 
 
-}
-.addBar {
-
-
-}
-
-/*#login-buttons {
-  display: block;
 }*/
 
-.letitre {
-  font-size: 2em;
-  margin: 0;
-  margin-bottom: 10px;
-  display: inline-block;
-  margin-right: 1em;
-  color: #FFF
+/** Global **/
+
+.container {
+  max-width: 1024px;
+  padding: 0;
 }
 
-form {
+/**  Header  **/
+#letitre{
+font-size: 1.7em;
+  color:#FFF;
+}
+
+.navbar{
+ margin:0;
+
+}
+#mainMenu{
+  padding: 1.5%;
+  background: #214471;
+}
+
+.navbar-brand {
+
+}
+
+#collapsedContent .btn-group {
+  margin-right: 5px;
+  margin-left:10px;
+}
+#collapsedContent .bestOfToday {
+  margin-right: 5px;
+  margin-left:10px;
+}
+#logbtn{
+  border:2px;
+  border-color: black;
+}
+
+
+/** eventslist **/
+.events-list .container {
+  background-color: hsla(0,100%,100%,0.2);
+}
+
+.events-list ul {
+  list-style: none;
+  background: white;
+  padding: 0;
+  margin:0;
+}
+.events-list a{
+  font-style: italic;
+}
+.events-list li {
+  position: relative;
+  list-style: none;
+  padding: 15px;
+  border-bottom: #EEE solid 1px;
+  background-color: #FFF;
+  margin:0;
+}
+
+
+.events-list li .text {
+}
+  /* specific coevents*/
+
+
+  .events-list .delete {
+    color:#8B0000;
+    float: right;
+    font-weight: bold;
+    background: none;
+    font-size: 1em;
+    border: none;
+    position: relative;
+  }
+  .events-list .vote {
+    color:#006400;
+    float: left;
+    font-weight: bold;
+    background: none;
+    border: 5px;
+    position: relative;
+    overflow:auto
+  }
+  /* Specific fb*/
+  .events-list .to-add {
+    color:#006400;
+
+  }
+
+
+/** Footer **/
+footer .container{
+  background-color:#214471;
+  padding: 1%;
+  position:relative;
+  bottom:0px;
+  color:#000;
+
+}
+.add-coev {
+  z-index:99999;
+}
+.add-coev form {
   margin-top: 10px;
   margin-bottom: 5px;
   position: relative;
@@ -83,28 +141,8 @@ form {
   outline: 0;
 }
 
-/*Bar on top of screen*/
-.buttonBar {
-  color:#000;
+.buttonBas {
+
+  color: black;
 }
 
-.coeventsList{
-  padding:0;
-}
-
-.coeventsList ul {
-  margin: 0;
-  padding-left: 0px;
-  /*background: white;*/
-}
-
-
-.fbimportScreen {
-/*  background-color: #FFF;
-*/  background: #FFF;
-  /*color:black;*/
-  margin:0;
-  padding: 1%;
-
-
-}

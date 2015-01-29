@@ -1,5 +1,5 @@
 Template.addCoev.events({
- "submit .add-coev": function (event) {
+ "submit .add-coev": function (event) { //addCoevButton
     // This function is called when the new event form is submitted
 
     var name = event.target.nameCoev.value;
