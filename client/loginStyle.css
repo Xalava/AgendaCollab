@@ -1,0 +1,261 @@
+/**********************************************
+https://github.com/billjohnston/Meteor-accounts-ui-bootstrap3-style
+ Base
+ **********************************************/
+.navbar-nav > li #login-buttons .login-link-text{
+    float: left;
+    padding: 15px;
+    line-height: 20px;
+    color: #000;
+    border-radius: 4px;
+}
+.navbar-nav > li > #login-buttons .login-link-text:hover {
+    background-color: transparent;
+    cursor: pointer;
+}
+.navbar-nav > li > #login-buttons .login-link-text:hover{
+    color: #333333;
+    text-decoration: none;
+}
+.navbar-nav > li > #login-buttons .login-close-text, #login-buttons-cancel-reset-password {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px 15px;
+    float: right;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1;
+    color: #000000;
+    text-shadow: 0 1px 0 #ffffff;
+    opacity: 0.2;
+    filter: alpha(opacity=20);
+}
+.navbar-nav > li > #login-buttons .login-close-text:hover, #login-buttons .login-close-text:focus, #login-buttons-cancel-reset-password:hover {
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+.navbar-nav > li > #login-buttons #login-dropdown-list {
+    position: absolute;
+    top: 55px;
+    right: 0px;
+    z-index: 1010;
+    width: 276px;
+    padding: 20px 15px 15px 15px;
+    text-align: left;
+    white-space: normal;
+    background-color: #214471;
+    border: 1px solid #cccccc;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    background-clip: padding-box;
+    -webkit-bg-clip: padding-box;
+    -moz-bg-clip: padding;
+}
+/**********************************************
+ Pop over arrows
+ **********************************************/
+.navbar-nav > li > #login-buttons #login-dropdown-list:before {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 12px;
+    border-bottom-color: #999;
+    border-bottom-color: rgba(0, 0, 0, 0.25);
+    border-top-width: 0;
+    content: " ";
+    top: -12px;
+    left: 243px;
+}
+.navbar-nav > li > #login-buttons #login-dropdown-list:after {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 11px;
+    border-bottom-color: #214471;
+    border-top-width: 0;
+    content: " ";
+    top:-11px;
+    left: 244px;
+}
+/**********************************************
+ Left and center align
+ **********************************************/
+.login-popover-left .navbar-nav > li > #login-buttons #login-dropdown-list {
+    left: 0px;
+}
+.login-popover-left .navbar-nav > li > #login-buttons #login-dropdown-list:before {
+    left: 6px;
+}
+.login-popover-left .navbar-nav > li > #login-buttons #login-dropdown-list:after {
+    left: 7px;
+}
+.login-popover-center .navbar-nav > li > #login-buttons #login-dropdown-list {
+    left: -95px;
+}
+.login-popover-center .navbar-nav > li > #login-buttons #login-dropdown-list:before {
+    left: 130px;
+}
+.login-popover-center .navbar-nav > li > #login-buttons #login-dropdown-list:after {
+    left: 131px;
+}
+.navbar-nav > li > #login-buttons #login-password-label-and-input, .navbar-nav > li > #login-buttons #login-email-label-and-input{
+    margin-top: 5px;
+}
+.navbar-nav > li > #login-buttons label{
+    width: 100%;
+    padding-top: 6px;
+}
+.navbar-nav > li > #login-buttons input{
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #555555;
+    vertical-align: middle;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+.navbar-nav > li > #login-buttons .login-button, #login-buttons-reset-password-button{
+    padding: 6px 0;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.428571429;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+
+    display: block;
+    width: 100%;
+
+    color: #ffffff;
+    background-color: #428bca;
+    border-color: #357ebd;
+
+    margin-top: 15px;
+}
+.navbar-nav > li > #login-buttons .additional-link-container{
+    cursor: pointer;
+    margin-top:15px;
+}
+.navbar-nav > li > #login-buttons #signup-link, .navbar-nav > li > #login-buttons #back-to-login-link{
+    float: right;
+}
+.navbar-nav > li > #login-buttons .login-button:hover, .navbar-nav > li > #login-buttons .login-button:active{
+    color: #ffffff;
+    background-color: #3276b1;
+    border-color: #285e8e;
+}
+.navbar-nav > li > #login-buttons .error-message{
+    color: #b94a48;
+    padding-left: 5px;
+}
+/**********************************************
+ Navbar inverse
+ **********************************************/
+.navbar-inverse .navbar-nav > li > #login-buttons .login-link-text {
+    color: #999999;
+}
+.navbar-inverse .navbar-nav > li > #login-buttons .login-link-text:hover {
+    color: #ffffff;
+}
+/**********************************************
+ Navbar button (must add navbar-button class to navbar)
+ **********************************************/
+.navbar-button .navbar-nav > li #login-buttons .login-link-text{
+    margin-top: 8px;
+
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.428571429;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+
+    color: #ffffff;
+    background-color: #428bca;
+    border-color: #357ebd;
+}
+.navbar-button .navbar-nav > li #login-buttons .login-link-text:hover{
+    color: #ffffff;
+    background-color: #3276b1;
+    border-color: #285e8e;
+}
+.navbar-button .navbar-nav > li > #login-buttons #login-dropdown-list:before {
+    left: 245px;
+}
+.navbar-button .navbar-nav > li > #login-buttons #login-dropdown-list:after {
+    left: 246px;
+}
+/**********************************************
+Reset password modal
+ **********************************************/
+.hide-background{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2030;
+    background-color: #000000;
+    opacity: 0.5;
+}
+.accounts-centered-dialog{
+    margin-top: 30px;
+    position: fixed;
+    z-index: 2040;
+    right: auto;
+    left: 50%;
+    width: 300px;
+    padding: 30px 10px 15px;
+    margin-left: -150px;
+    background-color: #fff;
+    border: 1px solid #999999;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    outline: none;
+    -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+    background-clip: padding-box;
+}
+#login-buttons-cancel-reset-password{
+    font-size: 25px;
+    padding: 1px 10px;
+}
