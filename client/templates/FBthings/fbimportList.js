@@ -1,9 +1,8 @@
-importedEvents = new Mongo.Collection(null);
 
 Template.fbimportList.events({
 
   'click .importValidation': function (event) {
-	var impArray = importedEvents.find({toadd:true}).fetch();
+	var impArray = Session.get("importedEvents").find({toadd:true}).fetch();
 
 	for (var i = impArray.length - 1; i >= 0; i--) {
 		Meteor.call(
@@ -28,11 +27,13 @@ Template.fbimportList.helpers({
 
 
 	importedEvents: function () {
+		//Session.set("importedEvents", new Mongo.Collection(null));
+
 		console.log("in importedEvents");
 
-		FBattendingEvents(importedEvents);
+		FBattendingEvents();
 
-		return importedEvents.find();
+		return Session.get("importedEvents").find();
 
 	}
 

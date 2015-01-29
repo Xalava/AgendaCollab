@@ -3,7 +3,7 @@
 Template.importedEvent.events({
   "click .toggle-import": function (event) {
     // Set the checked property to the opposite of its current value
-	importedEvents.update(this._id,{ $set: { toadd: !this.toadd} });
+	Session.get("importedEvents").update(this._id,{ $set: { toadd: !this.toadd} });
  	}
 }); 
 
