@@ -2,8 +2,8 @@
 Template.fbimportList.events({
 
   'click .importValidation': function (event) {
-	var impArray = Session.get("importedEvents").find({toadd:true}).fetch();
-
+	var impArray = Session.get("importedEvents");
+	// selecton only 
 	for (var i = impArray.length - 1; i >= 0; i--) {
 		Meteor.call(
 			'addCoev',
@@ -11,29 +11,22 @@ Template.fbimportList.events({
 			impArray[i].start_time,
 			("http://www.facebook.com/events/").concat(impArray[i].id)
 			);
-	};
-  	 
+	}; 	 
 	
 	Router.go("/");
 
  	}  
 
-
 });
-
 
 Template.fbimportList.helpers({
 
-
-
 	importedEvents: function () {
-		//Session.set("importedEvents", new Mongo.Collection(null));
+	FBattendingEvents();
 
-		console.log("in importedEvents");
-
-		FBattendingEvents();
-
-		return Session.get("importedEvents").find();
+	console.log("importedEventshelper")
+	return Session.get("importedEvents");
+	
 
 	}
 
