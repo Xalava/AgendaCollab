@@ -1,23 +1,19 @@
 /********************/
 /* Main Style sheet */
 /********************/
+@appWidth:1024px;
+@backColor: #214471;
 
 body {
   font-family: sans-serif;
   background-attachment: fixed;
   background-image: url('/img/living.jpg');
 }
-/*#mainCont{
-    max-width: 1024px;
-      padding: 0;
-
-
-}*/
 
 /** Global **/
 
 .container {
-  max-width: 1024px;
+  max-width: @appWidth;
   padding: 0;
 }
 
@@ -33,7 +29,7 @@ font-size: 1.7em;
 }
 #mainMenu{
   padding: 1.5%;
-  background: #214471;
+  background: @backColor;
 }
 
 .navbar-brand {
@@ -58,29 +54,26 @@ font-size: 1.7em;
 .events-list {
   /*background-color: hsla(0,100%,100%,0.2);*/
   margin-bottom: 15%; 
+
+  ul {
+    list-style: none;
+    background: white;
+    padding: 0;
+    margin:0;
+  }
+   a{
+    font-style: italic;
+  }
+   li {
+    position: relative;
+    list-style: none;
+    padding: 15px;
+    border-bottom: #EEE solid 1px;
+    background-color: #FFF;
+    margin:0;
+  }
 }
 
-.events-list ul {
-  list-style: none;
-  background: white;
-  padding: 0;
-  margin:0;
-}
-.events-list a{
-  font-style: italic;
-}
-.events-list li {
-  position: relative;
-  list-style: none;
-  padding: 15px;
-  border-bottom: #EEE solid 1px;
-  background-color: #FFF;
-  margin:0;
-}
-
-
-.events-list li .text {
-}
   /* specific coevents*/
 
 
@@ -111,17 +104,18 @@ font-size: 1.7em;
 
 /** Footer **/
 footer {
-  background-color:#214471;
+  background-color:@backColor;
   padding: 1%;
   position:fixed;
   bottom:0px;
   width: 100%;
-  max-width: 1024px;
+  max-width: @appWidth;
   color:#000;
 
 }
 .add-coev {
-  /*z-index:99999;*/
+   background-color: @backColor;
+
 }
 .add-coev form {
   margin-top: 10px;
