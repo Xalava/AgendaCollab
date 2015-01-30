@@ -1,4 +1,4 @@
-Template.fbimportButton.events({
+git Template.fbimportButton.events({
 
   'click .importFB': function (event) {
   	    if (! Meteor.user()) {
