@@ -4,11 +4,10 @@ Template.importedEvent.events({
   "click .toggle-import": function (event) {
     // Set the checked property to the opposite of its current value
 
-    this.toadd = true;
-//    Session.set();
+    this.toadd = !this.toadd;
     console.log("toggle-import");
     console.log(this);
-    console.log(Session.get("importedEvents"));
+    // console.log(Session.get("importedEvents"));
   }
 }); 
 
