@@ -12,6 +12,7 @@ Template.fbimportList.events({
 			);
 	}; 	 
 	importedEvents.remove({});
+	clearErrors();
 	Router.go("/");
 
  	},
@@ -19,6 +20,7 @@ Template.fbimportList.events({
  	'click .backBtn': function (event) {
  	 
 	importedEvents.remove({});
+	clearErrors();
 	Router.go("/");
 
  	} 
@@ -30,7 +32,7 @@ importedEvents = new Meteor.Collection( null );
 Template.fbimportList.helpers({
 
 	importedEvents: function () {
-	FBattendingEvents(importedEvents);
+	FBaddEvents(importedEvents,"/me/events");
 
 	console.log("importedEventshelper")
 	return importedEvents.find({});

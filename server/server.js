@@ -40,12 +40,9 @@ Meteor.methods({
     //   // If the task is private, make sure only the owner can delete it
     //   throw new Meteor.Error("not-authorized");
     // } else {
-    if (! Meteor.user()) {
-      // return alert("Please sign in to be able to delete events");
-      throw new Meteor.Error("not-authorized");
-    }  else {
+
       Coevents.remove(coevId);
-    }
+    
   },
   // FACEBOOOK
   // fbme: function() {

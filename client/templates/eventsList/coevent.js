@@ -8,7 +8,13 @@ Template.coevent.events({
 //   },
   
    "click .delete": function () {
-   Meteor.call("deleteCoev", this._id)
+
+     if (! Meteor.user()) {
+      throwError("You must be logged in to delete events")
+    //  throw new Meteor.Error("not-authorized");
+    }  else {
+      Meteor.call("deleteCoev", this._id)
+    }
 },
 
    "click .vote": function () {
