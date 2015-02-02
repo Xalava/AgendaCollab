@@ -1,4 +1,4 @@
-Template.menu.helpers({
+Template.header.helpers({
   currentDate: function() {
   	// debug function to understand dates
   	var CurrentDate = new Date();
@@ -18,7 +18,7 @@ Template.menu.helpers({
 
 });
 
-Template.menu.events({
+Template.header.events({
 
   'click .trending': function (event) {
     Session.set("sort", 1);

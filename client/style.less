@@ -1,0 +1,215 @@
+/********************/
+/* Main Style sheet */
+/********************/
+@appWidth:750px; // matches bootstrap standart for midsized apparently
+@backColor: #214471;
+@okGreen:#006400;
+
+body {
+  font-family: sans-serif;
+  background-attachment: fixed;
+  background-image: url('/img/living.jpg');
+  padding-bottom: 15%; 
+  padding-top: 112px;
+  // max-width: @appWidth;
+}
+#mainCont{
+  // max-width: @appWidth;
+  // width: 75%;position: fixed;left: 50%;margin: 0 0 0 -37.5%;
+
+  // margin
+
+}
+/** Global **/
+
+
+.container {
+  max-width: @appWidth;
+  padding: 0;
+  // position:relative;
+}
+
+/**  Header  **/
+
+header container{
+}
+
+#letitre{
+font-size: 1.7em;
+  color:#FFF;
+  text-shadow: 1px 1px 0px #000; // with slight blue
+}
+
+.navbar{
+ margin:0;
+  display: block;
+
+}
+// main navbar
+header{
+}
+
+#mainMenu{
+  background: none;
+  border: none;
+
+}
+#mainMenu .container{
+  padding: 1.5%;
+  background: @backColor;
+
+}
+
+.navbar-brand {
+
+}
+
+#collapsedContent .btn-group {
+  margin-right: 5px;
+  margin-left:10px;
+}
+#collapsedContent .bestOfToday {
+  margin-right: 5px;
+  margin-left:10px;
+}
+#logbtn{
+  // border:2px;
+  // border-color: black;
+  // color: white !important;
+}
+
+.buttonHaut{
+  background-color: #57769;
+}
+
+
+/** eventslist **/
+.events-list {
+  background-color: hsla(0,100%,100%,0.2);
+  // margin-bottom: 15%; 
+  // margin-top: 112px;
+  //overflow-y:scroll;
+  padding: 0;
+  // position:fixed;
+
+
+
+  ul {
+    list-style: none;
+    background: white;
+    padding: 0;
+    margin:0;
+  }
+   a{
+    font-style: italic;
+  }
+   li {
+    position: relative;
+    list-style: none;
+    padding: 15px;
+    border-bottom: #EEE solid 1px;
+    background-color: #FFF;
+    margin:0;
+  }
+}
+
+  /* specific coevents*/
+
+
+  .events-list .delete {
+    color:#8B0000;
+    float: right;
+    font-weight: bold;
+    background: none;
+    font-size: 1em;
+    border: none;
+    position: relative;
+  }
+  .events-list .vote {
+    color:@okGreen;
+    float: left;
+    font-weight: bold;
+    background: none;
+    border: 5px;
+    position: relative;
+    overflow:auto
+  }
+  /* Specific fb*/
+  .events-list .to-add {
+    color:@okGreen;
+
+  }
+
+
+/** Footer **/
+footer {
+  background-color:@backColor;
+  padding: 1%;
+  position:fixed;
+  bottom:0px;
+  margin-right: auto;
+  margin-right: auto;
+  // position:sticky;
+  // width: 100%;
+  // max-width: @appWidth;
+  color:#000;
+width: 100%;
+max-width:@appWidth;
+}
+footer.content
+{
+
+}
+
+.add-coev {
+   background-color: @backColor;
+
+}
+.add-coev form {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.add-coev input {
+  padding: 10px 10px;
+  background: transparent;
+  border: thin;
+  width: 100%;
+  padding-right: 80px;
+  font-size: 1em;
+  color: #999;
+  position:fixed bottom;
+}
+
+.add-coev input:focus{
+  outline: 0;
+}
+
+.buttonBas {
+
+  color: black;
+  box-shadow: 1px 1px 1px #222;
+}
+
+/** Assombrir **/
+
+div {
+    -webkit-animation: assombrir 3s; /* Chrome, Safari, Opera */
+    animation: assombrir 3s;
+}
+
+
+@keyframes assombrir {
+    0%   {background: #000; }
+    25%  {background: #555; }
+    50%  {background: #999; }
+    75%  {background: #BBB;}
+    100% {background: #FFF; }
+}
+
+
+@keyframes greenvariation {
+    from {background: red;}
+    to {background: yellow;}
+}

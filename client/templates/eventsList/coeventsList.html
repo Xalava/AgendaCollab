@@ -1,0 +1,29 @@
+<template name="coeventsList">
+	<section class="events-list">
+
+  		<ul > 
+      		{{#each coevents}}
+	        	{{> coevent}}
+      		{{/each}}
+    	</ul>
+    </section>
+
+    <footer>
+      <div class="">
+
+
+        <div class="row">
+            <div class="col-md-4 col-md-offset-1 col-xs-6">
+				        {{> addCoev}}
+			       </div>
+			
+            <div class="col-md-4 col-md-offset-2 col-xs-6">
+                {{> fbimportButton}}
+            </div>
+        </div> <!-- row -->
+      </div>
+    </footer>
+
+
+
+ </template>

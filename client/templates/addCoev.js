@@ -1,5 +1,5 @@
 Template.addCoev.events({
- "submit .add-coev": function (event) {
+ "submit .add-coev": function (event) { //addCoevButton
     // This function is called when the new event form is submitted
 
     var name = event.target.nameCoev.value;
@@ -19,6 +19,7 @@ Template.addCoev.events({
     event.target.dateCoev.value = "";
     event.target.urlCoev.value = "";
 
+    document.location.reload();
 
     // Prevent default form submit
     return false;

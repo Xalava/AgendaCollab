@@ -1,0 +1,39 @@
+<template name="header ">
+<div id="fb-root"></div>
+<header>
+   <div class="navbar navbar-inverse navbar-fixed-top " id="mainMenu">
+    <div class="container">
+      <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapsedContent">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+
+          </button>
+        <a class="navbar-brand" href="/"><span id="letitre">Agenda Collab</span></a>
+      </div> <!-- navbarheader -->
+
+       <ul class="nav navbar navbar-right" id="logbtn">
+          {{> loginButtons}}
+        </ul>
+
+      <div class="collapse navbar-collapse" id="collapsedContent">
+  
+        
+        <ul class="nav navbar-nav">
+          <li class="btn-group">
+          	  <button class="trending navbar-btn btn buttonHaut">Trending</button>
+          	  <button class="upcoming navbar-btn btn buttonHaut">Upcoming</button>
+          		<button class="new navbar-btn btn btn buttonHaut">Newest</button>
+          </li>
+<!--           <li><button class="bestOfToday navbar-btn btn">Today's best</button></li>
+ -->        </ul>
+      </div> <!-- collapedconent -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+</header>
+
+
+</template>

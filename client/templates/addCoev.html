@@ -1,14 +1,13 @@
 <template name="addCoev" >
 
-    <div class="dropdown dropup ">
-        <button class="btn btn-success buttonBar dropdown-toggle btn-block " type="button" data-toggle="dropdown" >
+    <div class="dropdown dropup">
+        <button class="btn btn-success buttonBas dropdown-toggle btn-block " type="button" data-toggle="dropdown" id="addCoevButton" >
             <span class="glyphicon glyphicon-plus"></span> Add an event
         </button>
 
-        <div class="dropdown-menu dropup" style="background-color: #214471" >
-            <form class="add-coev">
-
-                <input type="text" class="form-control" name="nameCoev" placeholder="Nom de l'évènement" required/>
+        <div class="dropdown-menu dropup add-coev">
+            <form>
+                <input type="text" class="form-control" name="nameCoev" placeholder="Nom de l'évènement" />
                 <div class="input-group date">
 
                 <input class="set-due-date form-control" type="date" name="dateCoev" placeholder="date" id="dateEv"/>
@@ -20,31 +19,3 @@
     </div>
 
 </template>
-
-
-
-
-<!--    <div class="container-fluid">
-
-    <form class="add-coev">
-        <div class="float-left">Add event</div>
-
-    <div class="row">
-        <div class='col-sm-4'>
-            <input type="text" class="form-control" name="nameCoev" placeholder="Event Name" />
-        </div>
-        <div class='col-sm-3'>
-            <div class="input-group date">
-                 <input type="text" class="form-control" placeholder="date"><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
-            </div>
-            <input class="set-due-date form-control" type="date" name="dateCoev" placeholder="date" id="dateEv"/>
-        </div>
-        <div class='col-sm-4'>
-            <input type="url" class="form-control" name ="urlCoev" placeholder="Website"/>
-        </div>
-        <div class='col-sm-1'>
-            <input type="submit" class="btn glyphicon glyphicon-plus"/> 
-        </div>
-    </div> 
-    </form>
-    </div> -->

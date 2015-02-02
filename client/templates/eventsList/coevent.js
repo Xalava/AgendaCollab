@@ -8,7 +8,13 @@ Template.coevent.events({
 //   },
   
    "click .delete": function () {
-   Meteor.call("deleteCoev", this._id)
+
+     if (! Meteor.user()) {
+      throwError("You must be logged in to delete events")
+    //  throw new Meteor.Error("not-authorized");
+    }  else {
+      Meteor.call("deleteCoev", this._id)
+    }
 },
 
    "click .vote": function () {
@@ -36,6 +42,37 @@ Template.coevent.helpers({
 	//  return "";
 	// }
 
+  },
+
+  displayUrl: function() {
+    var str = this.url;
+
+    if (str == "") {
+      return "";
+    } else {
+      var i = str.search("//");
+      if (str.search("www.")){
+        i = 6 + i;
+      } else {
+        i = 4 + i;
+      }
+      str = str.substring(i,str.length);
+
+
+      //remplacer facebook ( lien le plus courant)
+      str = str.replace(/facebook/g,"fb");
+
+      //i = str.search("/")||str.length;
+
+      //str = str.substring(0,i + 12); 
+
+
+      return str;
+    }
+  },
+  infos: function(){
+    if(this.url != "")
+      return "infos";
   }
 
 });
