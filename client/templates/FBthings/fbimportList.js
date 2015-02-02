@@ -1,7 +1,9 @@
 Template.fbimportList.events({
 
   'click .importValidation': function (event) {
-	var impArray = importedEvents;
+	var impArray = importedEvents.find({toadd:true}).fetch();
+	console.log(impArray)
+
 	// selection only 
 	for (var i = impArray.length - 1; i >= 0; i--) {
 		Meteor.call(
@@ -10,7 +12,9 @@ Template.fbimportList.events({
 			impArray[i].start_time,
 			("http://www.facebook.com/events/").concat(impArray[i].id)
 			);
+		console.log(impArray[i].id.concat(" imported"));
 	}; 	 
+
 	importedEvents.remove({});
 	clearErrors();
 	Router.go("/");
