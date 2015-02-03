@@ -11,5 +11,5 @@ return Errors.find();
 });
 
 clearErrors = function() {
-Errors.remove({seen: true});
+Errors.remove({});
 }
