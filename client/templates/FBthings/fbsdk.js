@@ -14,8 +14,6 @@ FBaddEvents = function(tempCollection,eventsType){
 					tempCollection.insert(response.data[i]);
 				};
 
-
-		    	
 		    } else{
 		    	console.log("error loading events");
 		    	throwError("Could not load from Facebook. Try again later");
