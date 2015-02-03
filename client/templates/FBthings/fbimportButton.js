@@ -11,6 +11,8 @@ Template.fbimportButton.events({
 				    console.log('Welcome! Logged in, going to fbimport');
 				    clearErrors();	
 					Router.go("/fbimport");
+				}else{
+					throwError("Facebook Import is not available to the public yet");
 				};
 			}, {scope: 'user_events'});
 		}
