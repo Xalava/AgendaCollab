@@ -25,7 +25,7 @@ li.private {
   border-color: #ddd;
 }
 .delete {
-	color:#8B0000;
+  color:#8B0000;
   float: right;
   font-weight: bold;
   background: none;
@@ -37,7 +37,7 @@ li.private {
 
 
 .vote {
-	color:#006400;
+  color:#006400;
   float: left;
   font-weight: bold;
   background: none;
