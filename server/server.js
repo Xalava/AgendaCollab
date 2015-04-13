@@ -1,5 +1,3 @@
-//necessaire?
-// if (Meteor.isServer) {
 //   Meteor.startup(function () {
 //       // code to run on server at startup
 //   }
@@ -8,35 +6,31 @@
 Meteor.methods({
   addCoev: function (name,date,url) {
 
-    // Anonymous input if no login
-    if (! Meteor.userId()) {
-      Coevents.insert({
-        name: name,
-        date:date,
-        url:url,
-        votes:0,
-        createdAt: new Date(),
-        owner: "00",
-        username: "Anonymous"
-
-      });
-    } else {
-      Coevents.insert({
-        name: name,
-        date:date,
-        url:url,
-        votes:0,
-        createdAt: new Date(),
-        owner: Meteor.userId(),
-        username: Meteor.user().username
-      });
+    
+    var ownerId = '00';
+    var userName = "Anonymous";
+    if (Meteor.userId()){
+        ownerId = Meteor.userId();
+        userName = Meteor.user().username;
     }
+    Coevents.insert({
+        name: name,
+        date: date,
+        url: url,
+        votes: 0,
+        createdAt: new Date(),
+        owner: ownerId,
+        username: userName
+        });
+    
   },
   voteCoev: function (coevId) {
-    Coevents.update(coevId,{$inc: {votes: 1}});
+  
+    Coevents.update(coevId,{$inc : {votes: 1}});
 
   },
   deleteCoev: function (coevId) {
+    
     // var coevent = coevents.findOne(coevId);
     // if (coevent.private && coevent.owner !== Meteor.userId()) {
     //   // If the task is private, make sure only the owner can delete it
