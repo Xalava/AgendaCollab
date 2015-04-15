@@ -24,7 +24,7 @@ body {
 
 header {
   background: #214471;
-  padding: 20px 15px 15px 15px;
+  padding: 20px 15px 66px;
   position: relative;
   color:#CCC;
 }
@@ -49,15 +49,12 @@ form {
 }
 
 .add-coev input {
-  padding: 10px 10px;
-  background: transparent;
   border: thin;
   width: 100%;
   padding-right: 80px;
   font-size: 1em;
   color: #999;
-/*  position:fixed bottom;
-*/}
+}
 
 .add-coev input:focus{
   outline: 0;

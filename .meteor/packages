@@ -10,3 +10,10 @@ accounts-facebook
 ian:accounts-ui-bootstrap-3
 rajit:bootstrap3-datepicker
 tsega:bootstrap3-datetimepicker
+meteorhacks:npm
+
+
+npm-container
+bootstrap
+iron:router
+accounts-ui-unstyled

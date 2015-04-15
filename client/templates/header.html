@@ -7,7 +7,18 @@
 	       	<button class="trending btn btn-default">Trending</button>
 	       	<button class="upcoming btn b">Upcoming</button>
 		<button class="new btn">Newest</button>
+        
         </div>
-        {{> addCoev}}
+        <div>
+            {{> addCoev}}
+        </div>
+        <div>
+            <ul class="nav pull-right">
+                <li>
+                    {{>loginButtons}}
+                </li>
+            </ul>
+        </div>
+        <button class="btn" id="btn-user-events">Events</button> 
     </header>
 </template>
