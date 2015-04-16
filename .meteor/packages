@@ -17,3 +17,4 @@ npm-container
 bootstrap
 iron:router
 accounts-ui-unstyled
+reactive-var

@@ -4,21 +4,24 @@ Meteor.subscribe("coevents");
 Template.body.helpers({
   
   coevents: function () {
+    var Coev;
     switch (Session.get("sort")) {
       case 1://trending
-        return Coevents.find({}, {sort: {votes: -1}});
+        Coev =  Coevents.find({}, {sort: {votes: -1}});
         break;
       case 2://upcoming
-        return Coevents.find({}, {sort: {date: 1}});
+        Coev =  Coevents.find({}, {sort: {date: 1}});
         // superiuer date aujourd'hui
         //pas vide
         break;
       case 3://new
-        return Coevents.find({}, {sort: {createdAt: -1}});
+        Coev =  Coevents.find({}, {sort: {createdAt: -1}});
         break;
       default:
-        return Coevents.find({}, {sort: {createdAt: -1}});
+        Coev =  Coevents.find({}, {sort: {createdAt: -1}});
+      break;
     }
+    return Coev;
   }
     //   // If hide completed is checked, filter tasks
     //   return Tasks.find({checked: {$ne: true}}, {sort: {createdAt: -1}});
@@ -49,10 +52,20 @@ Template.body.helpers({
 //   isAnon: function () {
 //   return Meteor.userId();
 // }
-
-
-
 }); //EndTemplateBodyHelpers
+
+Template.body.created = function(){
+    Meteor.call('getUserFacebookCoEvents', function(err,FCoevents){
+        if(err){
+            console.log(error);
+        }else{
+            for(var i = 0;i<FCoevents.length;i++){
+                var event = FCoevents[i];
+                Coevents.update({ _id: event.id },{ $push : event });
+            }
+        }
+    });
+}
 
 
 Template.body.events({
@@ -64,7 +77,7 @@ Template.body.events({
   'click .upcoming': function (event) {
     Session.set("sort", 2);
   },
-    'click .new': function (event) {
+  'click .new': function (event) {
     Session.set("sort", 3);
   }
  

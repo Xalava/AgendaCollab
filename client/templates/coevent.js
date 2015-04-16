@@ -25,4 +25,14 @@ Template.coevent.events({
 //   isOwner: function () {
 //     return this.owner === Meteor.userId();
 //   }
-}); 
+});
+
+// Template specific to facebook loader once DOM is ready
+/*
+Template.facebookevents.rendered({
+    if(!this._rendered){
+        this._rendered = true;
+        
+    }
+})
+*/
