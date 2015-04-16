@@ -1,3 +1,5 @@
+var debug = Meteor.npmRequire('debug')('sc:coll:sample-collection');
+
 function Facebook(accessToken) {
     this.fb = Meteor.require('fbgraph');
     this.accessToken = accessToken;
@@ -26,9 +28,18 @@ Facebook.prototype.getUserEvents = function(facebookId){
     return events;
 }
 
+Facebook.prototype.enrichEvents = function(events){
+    var enrichedEvents = [];
+    debug(events);
+    for(var i = 0;i<events.data.length;i++){
+        enrichedEvents.push(this.query('v2.3/'+events.data[i].id));
+    }
+    return enrichedEvents;
+}
+
 Meteor.methods({
     getUserEvents : function(){
         fb = new Facebook(Meteor.user().services.facebook.accessToken);
-        return fb.getUserEvents(Meteor.user().services.facebook.id);
+        return fb.enrichEvents(fb.getUserEvents(Meteor.user().services.facebook.id));
     }
 });

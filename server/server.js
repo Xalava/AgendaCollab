@@ -1,7 +1,8 @@
-//   Meteor.startup(function () {
-//       // code to run on server at startup
-//   }
-// } //End is server
+if(Meteor.isServer){
+    Meteor.startup(function () {
+        DEBUG="sc:coll:*";
+    });
+ }
 
 Meteor.methods({
   addCoev: function (name,date,url) {
@@ -49,7 +50,7 @@ Meteor.methods({
   //   Tasks.update(taskId, { $set: { checked: setChecked} });
   // },
   // setPrivate: function (taskId, setToPrivate) {
-  //   var task = Tasks.findOne(taskId);
+    //   var task = Tasks.findOne(taskId);
 
   //   // Make sure only the task owner can make a task private
   //   if (task.owner !== Meteor.userId()) {
