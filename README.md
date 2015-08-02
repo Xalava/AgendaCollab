@@ -1,6 +1,6 @@
 # AgendaCollab
 
-Collaborative agenda designed for Lyon's community
+Collaborative agenda
 
 Feel free to clone, and to contact me if you want to contribute & take this project further.
 
